@@ -11,6 +11,14 @@ ThemeData theme(ThemeRef ref) {
     useMaterial3: true,
     colorScheme: // isLight? lightColorScheme ? darkColorScheme;
         darkColorScheme,
+  ).copyWith(
+    navigationRailTheme: const NavigationRailThemeData(
+      elevation: 0,
+      selectedIconTheme: IconThemeData(
+        color: Color(0xFF245FA6),
+      ),
+      indicatorColor: Color(0xFFD5E3FF),
+    ),
   );
 }
 

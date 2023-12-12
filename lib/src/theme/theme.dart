@@ -13,7 +13,7 @@ ThemeData theme(ThemeRef ref) {
         darkColorScheme,
   ).copyWith(
     navigationRailTheme: const NavigationRailThemeData(
-      elevation: 0,
+      backgroundColor: Colors.transparent,
       selectedIconTheme: IconThemeData(
         color: Color(0xFF245FA6),
       ),

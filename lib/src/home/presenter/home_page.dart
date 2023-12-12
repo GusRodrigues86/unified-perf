@@ -32,8 +32,13 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const Text(
-                    'You have pushed the button this many times:',
+                  const Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(8),
+                      child: Text(
+                        'You have pushed the button this many times:',
+                      ),
+                    ),
                   ),
                   Text(
                     '$_counter',

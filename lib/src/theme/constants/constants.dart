@@ -1,9 +1,25 @@
+// ignore_for_file: unused_element
+
 import 'dart:ui';
 
-/// The blue accent color
-/// HEX #274a64
-const kBlueOrion = Color(0xff274A64);
+/// These are the colors used on the custom builder of Material 3 Theme
 
-/// The purple main color
-/// HEX #a87397
-const kPurpleOrion = Color(0xffA87397);
+/// PRIMARY
+/// The blue color of Orion Nebula
+/// HEX #004688
+const _kOrionBlue = Color(0xff004688);
+
+/// SECONDARY
+/// The grey color
+/// HEX #8791a5
+const _kOrionGrey = Color(0xff8791a5);
+
+//// TERTIARY
+/// The purple color of Orion Nebula
+/// HEX #a387aa
+const _kOrionPurple = Color(0xffa387aa);
+
+/// NEUTRAL
+/// The neutraul Hue
+/// HEX #909094
+const _kOrionNeutral = Color(0xff909094);

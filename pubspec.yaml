@@ -25,6 +25,6 @@ dev_dependencies:
 
 
 flutter:
-  generate: true
+  generate: true # false 
   uses-material-design: true
 

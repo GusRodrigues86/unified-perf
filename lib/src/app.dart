@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class UnifiedPerfApp extends StatelessWidget {
+import 'theme/theme.dart';
+
+class UnifiedPerfApp extends ConsumerWidget {
   const UnifiedPerfApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
-          brightness: Brightness.dark,
-        ),
-        useMaterial3: true,
-      ),
+      theme: ref.watch(themeProvider),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

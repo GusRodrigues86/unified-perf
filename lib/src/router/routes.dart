@@ -1,20 +1,21 @@
-import '../home/home.dart';
+import '../landing/landing.dart';
+import '../settings/settings.dart';
+import '../takeoff/takeoff.dart';
 
 /// All known routes of the app for being easy to use
 enum Routes {
   /// path `/`
-  home(path: HomePage.path, named: HomePage.named),
+  // home(path: HomePage.path, named: HomePage.named),
 
   /// path `/settings`
-  settings(path: '/settings', named: 'settings'),
+  settings(path: SettingsPage.path),
 
-  /// path `/take_off`
-  takeoff(path: '/take_off', named: 'takeoff'),
+  /// path `/`
+  takeoff(path: TakeoffPage.path),
 
   /// path `/landing`
-  landing(path: '/landing', named: 'landing');
+  landing(path: LandingPage.path);
 
-  const Routes({required this.path, required this.named});
+  const Routes({required this.path});
   final String path;
-  final String named;
 }

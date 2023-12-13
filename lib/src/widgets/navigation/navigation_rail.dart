@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../router/routes.dart';
 
 class DesktopNav extends StatefulWidget {
   const DesktopNav({super.key});
@@ -16,6 +19,20 @@ class _DesktopNavState extends State<DesktopNav> {
     _selectedIndex = 0;
   }
 
+  void navigate(int i) {
+    switch (i) {
+      case 0:
+        context.goNamed(Routes.takeoff.name);
+        break;
+      case 1:
+        context.goNamed(Routes.landing.name);
+        break;
+      case 2:
+        context.goNamed(Routes.settings.name);
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -24,7 +41,10 @@ class _DesktopNavState extends State<DesktopNav> {
         child: NavigationRail(
           selectedIndex: _selectedIndex,
           labelType: NavigationRailLabelType.selected,
-          onDestinationSelected: (i) => setState(() => _selectedIndex = i),
+          onDestinationSelected: (i) => setState(() {
+            _selectedIndex = i;
+            navigate(i);
+          }),
           destinations: const [
             NavigationRailDestination(
               icon: Icon(Icons.flight_takeoff),

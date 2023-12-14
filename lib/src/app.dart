@@ -12,6 +12,7 @@ class UnifiedPerfApp extends ConsumerWidget {
     final router = ref.watch(routerProvider);
 
     return MaterialApp.router(
+      debugShowCheckedModeBanner: true,
       title: 'Flutter Demo',
       theme: ref.watch(themeProvider),
       routerConfig: router,

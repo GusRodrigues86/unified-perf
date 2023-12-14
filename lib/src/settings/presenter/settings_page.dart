@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/widgets.dart';
+
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
 
@@ -14,27 +16,17 @@ class SettingsPage extends StatelessWidget {
     return const Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        Row(
-          children: [
-            Icon(Icons.thermostat),
-            Text('Temperature'),
-          ],
-        ),
+        TemperatureSettings(),
         Divider(),
-        Row(
-          children: [
-            Icon(Icons.line_weight),
-            Text('Weight'),
-          ],
-        ),
+        MassSettings(),
         Divider(),
-        Row(
-          children: [
-            Icon(Icons.compress),
-            Text('Pressure'),
-          ],
-        ),
+        PressureSettings(),
         Divider(),
+        ElevationSettings(),
+        Divider(),
+        LengthSettings(),
+        Divider(),
+        ThemeSettings(),
       ],
     );
   }

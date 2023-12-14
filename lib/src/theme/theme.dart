@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../settings/provider/ui_settings_provider.dart';
+
 part 'theme.g.dart';
 
-@riverpod
+@Riverpod(keepAlive: true)
 ThemeData theme(ThemeRef ref) {
-  // final isLightTheme = ref.watch(userThemeSelectionProvider);
-
   return ThemeData.from(
     useMaterial3: true,
-    colorScheme: // isLight? lightColorScheme ? darkColorScheme;
-        darkColorScheme,
+    colorScheme:
+        ref.watch(uiSettingsProvider) ? lightColorScheme : darkColorScheme,
   ).copyWith(
     navigationRailTheme: const NavigationRailThemeData(
       backgroundColor: Colors.transparent,

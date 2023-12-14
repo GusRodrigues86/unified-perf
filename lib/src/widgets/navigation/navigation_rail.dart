@@ -40,7 +40,7 @@ class _DesktopNavState extends State<DesktopNav> {
         padding: const EdgeInsets.all(8),
         child: NavigationRail(
           selectedIndex: _selectedIndex,
-          labelType: NavigationRailLabelType.selected,
+          labelType: NavigationRailLabelType.all,
           onDestinationSelected: (i) => setState(() {
             _selectedIndex = i;
             navigate(i);

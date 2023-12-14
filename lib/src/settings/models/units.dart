@@ -23,7 +23,7 @@ class Units extends Equatable {
   }) {
     return Units(
       elevationInFeet: elevationInFeet ?? this.elevationInFeet,
-      lengthInFeet: elevationInFeet ?? this.lengthInFeet,
+      lengthInFeet: lengthInFeet ?? this.lengthInFeet,
       massIsMetric: massIsMetric ?? this.massIsMetric,
       pressureIsMetric: pressureIsMetric ?? this.pressureIsMetric,
       temperatureIsMetric: temperatureIsMetric ?? this.temperatureIsMetric,

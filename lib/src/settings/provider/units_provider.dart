@@ -21,10 +21,10 @@ class UnitSettings extends _$UnitSettings {
       state = state.copyWith(elevationInFeet: inFeet == 0);
 
   void toggleLength(int inFeet) =>
-      state = state.copyWith(elevationInFeet: inFeet == 0);
+      state = state.copyWith(lengthInFeet: inFeet == 0);
 
   void toggleMass(int metric) =>
-      state = state.copyWith(elevationInFeet: metric == 0);
+      state = state.copyWith(massIsMetric: metric == 0);
 
   void togglePressure(int metric) =>
       state = state.copyWith(pressureIsMetric: metric == 0);

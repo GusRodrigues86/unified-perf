@@ -9,6 +9,7 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
   flutter_riverpod: ^2.4.9
@@ -26,6 +27,6 @@ dev_dependencies:
 
 
 flutter:
-  generate:  false 
+  generate: true # false 
   uses-material-design: true
 

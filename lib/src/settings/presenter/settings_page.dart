@@ -12,17 +12,29 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        Card(
-          child: Padding(
-            padding: EdgeInsets.all(8),
-            child: Text(
-              'Settings Page',
-            ),
-          ),
+        Row(
+          children: [
+            Icon(Icons.thermostat),
+            Text('Temperature'),
+          ],
         ),
-        Text('counter'),
+        Divider(),
+        Row(
+          children: [
+            Icon(Icons.line_weight),
+            Text('Weight'),
+          ],
+        ),
+        Divider(),
+        Row(
+          children: [
+            Icon(Icons.compress),
+            Text('Pressure'),
+          ],
+        ),
+        Divider(),
       ],
     );
   }

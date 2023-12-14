@@ -22,7 +22,6 @@ class LandingPage extends StatelessWidget {
             ),
           ),
         ),
-        Text('counter'),
       ],
     );
   }

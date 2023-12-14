@@ -16,7 +16,12 @@ class HomePage extends StatelessWidget {
       body: Row(
         children: [
           const DesktopNav(),
-          Expanded(child: child),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(8),
+              child: child,
+            ),
+          ),
         ],
       ),
     );

@@ -4,18 +4,18 @@ import '../takeoff/takeoff.dart';
 
 /// All known routes of the app for being easy to use
 enum Routes {
-  /// path `/`
-  // home(path: HomePage.path, named: HomePage.named),
-
   /// path `/settings`
   settings(path: SettingsPage.path),
 
-  /// path `/`
+  /// path `/takeoff`
   takeoff(path: TakeoffPage.path),
 
   /// path `/landing`
   landing(path: LandingPage.path);
 
+  /// Easy way to navigate through the app pages
   const Routes({required this.path});
+
+  /// The path to the page
   final String path;
 }

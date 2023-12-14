@@ -16,7 +16,7 @@ class ElevationButton extends StatelessWidget {
         final model = ref.watch(unitSettingsProvider);
 
         return ToggleButtons(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          borderRadius: const BorderRadius.all(Radius.circular(30)),
           isSelected: [model.elevationInFeet, !model.elevationInFeet],
           onPressed: ref.read(unitSettingsProvider.notifier).toggleElevation,
           focusNodes: [btn1, btn2],

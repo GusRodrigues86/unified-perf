@@ -16,7 +16,7 @@ class MassButton extends StatelessWidget {
         final model = ref.watch(unitSettingsProvider);
 
         return ToggleButtons(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          borderRadius: const BorderRadius.all(Radius.circular(30)),
           isSelected: [model.massIsMetric, !model.massIsMetric],
           onPressed: ref.read(unitSettingsProvider.notifier).toggleMass,
           focusNodes: [btn1, btn2],

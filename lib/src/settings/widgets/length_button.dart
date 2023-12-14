@@ -16,7 +16,7 @@ class LengthButton extends StatelessWidget {
         final model = ref.watch(unitSettingsProvider);
 
         return ToggleButtons(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          borderRadius: const BorderRadius.all(Radius.circular(30)),
           isSelected: [model.lengthInFeet, !model.lengthInFeet],
           onPressed: ref.read(unitSettingsProvider.notifier).toggleLength,
           focusNodes: [btn1, btn2],

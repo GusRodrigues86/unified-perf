@@ -16,7 +16,7 @@ class TemperatureButton extends StatelessWidget {
         final model = ref.watch(unitSettingsProvider);
 
         return ToggleButtons(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          borderRadius: const BorderRadius.all(Radius.circular(30)),
           isSelected: [model.temperatureIsMetric, !model.temperatureIsMetric],
           onPressed: ref.read(unitSettingsProvider.notifier).toggleTemp,
           focusNodes: [btn1, btn2],

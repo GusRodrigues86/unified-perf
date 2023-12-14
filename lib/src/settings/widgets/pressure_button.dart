@@ -16,7 +16,7 @@ class PressureButton extends StatelessWidget {
         final model = ref.watch(unitSettingsProvider);
 
         return ToggleButtons(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          borderRadius: const BorderRadius.all(Radius.circular(30)),
           isSelected: [model.pressureIsMetric, !model.pressureIsMetric],
           onPressed: ref.read(unitSettingsProvider.notifier).togglePressure,
           focusNodes: [btn1, btn2],

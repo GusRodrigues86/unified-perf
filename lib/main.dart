@@ -13,9 +13,7 @@ Future<void> main() async {
 
   await windowManager.ensureInitialized();
 
-  final isDesktop = Platform.isLinux || Platform.isMacOS || Platform.isWindows;
-
-  if (isDesktop) {
+  if (Platform.isLinux || Platform.isMacOS || Platform.isWindows) {
     await WindowManager.instance.setMinimumSize(const Size(640, 480));
   }
 

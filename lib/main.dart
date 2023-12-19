@@ -11,9 +11,8 @@ import 'utils/provider_logger.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await windowManager.ensureInitialized();
-
   if (Platform.isLinux || Platform.isMacOS || Platform.isWindows) {
+    await windowManager.ensureInitialized();
     await WindowManager.instance.setMinimumSize(const Size(640, 480));
   }
 

@@ -12,18 +12,16 @@ class Home extends _$Home {
   @override
   Future<bool> build() async {
     bool useRail = true;
-    bool isDesktop = false;
+    bool isDesktop = true;
 
     if (Platform.isAndroid || Platform.isIOS) {
       useRail = false;
+      isDesktop = false;
       if (Platform.isIOS) {
-        _isDesktop = Platform.isIOS;
         await DeviceInfoPlugin().iosInfo.then(
               (info) => useRail = info.localizedModel == 'iPad',
             );
       }
-    } else {
-      isDesktop = true;
     }
 
     _isDesktop = isDesktop;

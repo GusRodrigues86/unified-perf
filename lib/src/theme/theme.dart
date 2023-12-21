@@ -12,6 +12,9 @@ ThemeData theme(ThemeRef ref) {
     colorScheme:
         ref.watch(uiSettingsProvider) ? lightColorScheme : darkColorScheme,
   ).copyWith(
+    navigationBarTheme: const NavigationBarThemeData(
+      indicatorColor: Color(0xFF245FA6),
+    ),
     navigationRailTheme: const NavigationRailThemeData(
       backgroundColor: Colors.transparent,
       selectedIconTheme: IconThemeData(

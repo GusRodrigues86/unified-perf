@@ -28,7 +28,9 @@ class HomePage extends ConsumerWidget {
             data: (useRail) => useRail
                 ? Scaffold(
                     body: Padding(
-                      padding: const EdgeInsets.only(top: kToolbarHeight),
+                      padding: ref.read(homeProvider.notifier).isDesktop()
+                          ? EdgeInsets.zero
+                          : const EdgeInsets.only(top: kToolbarHeight),
                       child: Row(children: [
                         const DesktopNav(),
                         Expanded(

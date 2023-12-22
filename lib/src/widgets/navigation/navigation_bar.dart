@@ -33,14 +33,16 @@ class _MobileNavState extends State<MobileNav> {
     }
   }
 
+  void onDestinationSelected(int i) => setState(() {
+        _selectedIndex = i;
+        navigate(i);
+      });
+
   @override
   Widget build(BuildContext context) {
     return NavigationBar(
       selectedIndex: _selectedIndex,
-      onDestinationSelected: (i) => setState(() {
-        _selectedIndex = i;
-        navigate(i);
-      }),
+      onDestinationSelected: onDestinationSelected,
       destinations: const [
         NavigationDestination(
           icon: Icon(Icons.flight_takeoff),

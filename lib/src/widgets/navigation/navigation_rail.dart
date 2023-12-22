@@ -33,6 +33,11 @@ class _DesktopNavState extends State<DesktopNav> {
     }
   }
 
+  void onDestinationSelected(int i) => setState(() {
+        _selectedIndex = i;
+        navigate(i);
+      });
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -43,10 +48,7 @@ class _DesktopNavState extends State<DesktopNav> {
           child: NavigationRail(
             selectedIndex: _selectedIndex,
             labelType: NavigationRailLabelType.all,
-            onDestinationSelected: (i) => setState(() {
-              _selectedIndex = i;
-              navigate(i);
-            }),
+            onDestinationSelected: onDestinationSelected,
             destinations: const [
               NavigationRailDestination(
                 icon: Icon(Icons.flight_takeoff),

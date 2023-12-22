@@ -21,24 +21,22 @@ GoRouter router(RouterRef ref) {
     routes: [
       ShellRoute(
         navigatorKey: _shellNavigatorKey,
-        builder: (context, state, child) => HomePage(
-          child: child,
-        ),
+        builder: (_, s, child) => HomePage(key: s.pageKey, child: child),
         routes: [
           GoRoute(
             path: TakeoffPage.path,
             name: TakeoffPage.named,
-            builder: (_, __) => const TakeoffPage(),
+            builder: (context, state) => TakeoffPage(key: state.pageKey),
           ),
           GoRoute(
             path: LandingPage.path,
             name: LandingPage.named,
-            builder: (_, __) => const LandingPage(),
+            builder: (context, state) => LandingPage(key: state.pageKey),
           ),
           GoRoute(
             path: SettingsPage.path,
             name: SettingsPage.named,
-            builder: (_, __) => const SettingsPage(),
+            builder: (context, state) => SettingsPage(key: state.pageKey),
           ),
         ],
       ),

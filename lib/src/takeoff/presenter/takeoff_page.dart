@@ -13,13 +13,12 @@ class TakeoffPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        Card(
+        Expanded(
           child: Padding(
             padding: EdgeInsets.all(8),
-            child: Text(
-              'Takeoff Page',
-            ),
+            child: Center(child: Text('Takeoff Page')),
           ),
         ),
       ],

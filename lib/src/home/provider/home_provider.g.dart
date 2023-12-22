@@ -1,24 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'units_provider.dart';
+part of 'home_provider.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$unitSettingsHash() => r'a72550eaf412f20d1f35a612887f5fc1dfa5dce8';
+String _$homeHash() => r'9d62a419549186e0d6c66689f32af6bcd755c120';
 
-/// See also [UnitSettings].
-@ProviderFor(UnitSettings)
-final unitSettingsProvider = NotifierProvider<UnitSettings, Units>.internal(
-  UnitSettings.new,
-  name: r'unitSettingsProvider',
+/// See also [Home].
+@ProviderFor(Home)
+final homeProvider = AutoDisposeAsyncNotifierProvider<Home, bool>.internal(
+  Home.new,
+  name: r'homeProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$unitSettingsHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$homeHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$UnitSettings = Notifier<Units>;
+typedef _$Home = AutoDisposeAsyncNotifier<bool>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

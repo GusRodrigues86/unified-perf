@@ -25,37 +25,22 @@ class HomePage extends ConsumerWidget {
               child: CircularProgressIndicator.adaptive(),
             ),
             error: (_, __) => const Text('error building the home'),
-            data: (useRail) => useRail
-                ? Scaffold(
-                    body: Padding(
-                      padding: ref.read(homeProvider.notifier).isDesktop()
-                          ? EdgeInsets.zero
-                          : const EdgeInsets.only(top: kToolbarHeight),
-                      child: Row(children: [
-                        const DesktopNav(),
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8),
-                            child: child,
-                          ),
-                        ),
-                      ]),
+            data: (useRail) => Scaffold(
+              bottomNavigationBar: useRail ? null : const MobileNav(),
+              body: SafeArea(
+                child: Row(
+                  children: [
+                    Visibility(visible: useRail, child: const DesktopNav()),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: child,
+                      ),
                     ),
-                  )
-                : Scaffold(
-                    bottomNavigationBar: const MobileNav(),
-                    body: Padding(
-                      padding: const EdgeInsets.only(top: kToolbarHeight),
-                      child: Row(children: [
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8),
-                            child: child,
-                          ),
-                        ),
-                      ]),
-                    ),
-                  ),
+                  ],
+                ),
+              ),
+            ),
           ),
     );
   }

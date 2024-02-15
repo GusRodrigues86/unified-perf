@@ -15,7 +15,7 @@ class Home extends _$Home {
       useRail = false;
 
       if (Platform.isIOS) {
-        await DeviceInfoPlugin().iosInfo.then(
+        await DeviceInfoPlugin().iosInfo.then<bool>(
               (info) => useRail = info.localizedModel == 'iPad',
             );
       }
